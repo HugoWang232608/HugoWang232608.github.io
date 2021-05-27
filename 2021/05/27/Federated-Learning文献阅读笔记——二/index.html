@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="欢迎来到我的个人博客，我将在这里记录我的生活，写一些技术贴还有随笔什么的（尽量更新）">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://example.com/tags/index.html">
+  <meta name="description" content="Author: Fenglin Liu, X. W., Shen Ge, Wei Fan, Yuexian Zou Title: Federated Learning for Vision-and-Language Grounding Problems  BookTitle: The Thirty-Fourth AAAI Conference on Artificial Intelligence">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Federated Learning文献阅读笔记——一">
+<meta property="og:url" content="http://example.com/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/index.html">
 <meta property="og:site_name" content="Hugo&#39;s space">
-<meta property="og:description" content="欢迎来到我的个人博客，我将在这里记录我的生活，写一些技术贴还有随笔什么的（尽量更新）">
+<meta property="og:description" content="Author: Fenglin Liu, X. W., Shen Ge, Wei Fan, Yuexian Zou Title: Federated Learning for Vision-and-Language Grounding Problems  BookTitle: The Thirty-Fourth AAAI Conference on Artificial Intelligence">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-12T19:47:02.000Z">
-<meta property="article:modified_time" content="2021-05-12T19:47:02.748Z">
+<meta property="article:published_time" content="2021-05-27T10:31:08.000Z">
+<meta property="article:modified_time" content="2021-05-27T10:43:21.683Z">
 <meta property="article:author" content="Hugo Wang(Wang Zenghui)">
-<meta property="article:tag" content="随笔,技术">
+<meta property="article:tag" content="联邦学习">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/tags/">
+<link rel="canonical" href="http://example.com/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/">
 
 
 <script id="page-configurations">
@@ -41,13 +41,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>tags | Hugo's space
-</title>
+  <title>Federated Learning文献阅读笔记——一 | Hugo's space</title>
   
 
 
@@ -160,43 +159,117 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/love.jpg">
+      <meta itemprop="name" content="Hugo Wang(Wang Zenghui)">
+      <meta itemprop="description" content="欢迎来到我的个人博客，我将在这里记录我的生活，写一些技术贴还有随笔什么的（尽量更新）">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hugo's space">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Federated Learning文献阅读笔记——一
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2021-05-27 18:31:08 / 修改时间：18:43:21" itemprop="dateCreated datePublished" datetime="2021-05-27T18:31:08+08:00">2021-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">联邦学习</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
   
 
-</div>
+        </div>
+      </header>
 
-</header>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
+        <p><strong>Author: Fenglin Liu, X. W., Shen Ge, Wei Fan, Yuexian Zou</strong></p>
+<p><strong>Title: Federated Learning for Vision-and-Language Grounding Problems</strong> </p>
+<p><strong>BookTitle: The Thirty-Fourth AAAI Conference on Artificial Intelligence</strong></p>
+<p><strong>Year: 2020</strong></p>
+<p>原文地址：<a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/6824">https://ojs.aaai.org/index.php/AAAI/article/view/6824</a></p>
+<h4 id="这篇文章面对的问题："><a href="#这篇文章面对的问题：" class="headerlink" title="这篇文章面对的问题："></a>这篇文章面对的问题：</h4><p>&emsp;&emsp;视觉语言（vision-and-language）领域最近受到越来越多的关注，比如说image caption问题和VQA（visual question answering）问题，尽管深度神经网络已经取得了很大的成功，但是大部分深度学习的框架仍然是聚焦于单独的任务（individual tasks），事实上如果将这些任务放在一起来考虑，有很大的概率获得更好的效果。实际上已经有这样的工作了，但是这些方法需要将所有的下游任务数据（downstream tasks data）进行共享，这样会导致数据泄露；而且当任务跨数据集时，这些方法就没有办法起效了。</p>
+<h4 id="这篇文章的贡献："><a href="#这篇文章的贡献：" class="headerlink" title="这篇文章的贡献："></a>这篇文章的贡献：</h4><p>&emsp;&emsp;作者打算采用联邦学习的思路来解决以上问题，作出了以下贡献：</p>
+<p>&emsp;&emsp;1、提出了一个联邦学习框架。通过生成细粒度的图像表征，提高了各种视觉和语言基础问题的性能，而不需要共享下游的任务数据。</p>
+<p>&emsp;&emsp;2、在框架中实现了集中式模型，即设计的对齐、整合和映射网络（aimNet），它将从图像中提取的视觉和文本特征有效地自动转换为细粒度的图像表示。</p>
+<p>&emsp;&emsp;3、在三个联合学习环境中验证了这些方法。在MSCOCO图像标题数据集、Flickr30k图像标题数据集和VQA v2.0数据集上进行的广泛实验证明了方法的有效性和普遍性。</p>
+<h4 id="我的理解："><a href="#我的理解：" class="headerlink" title="我的理解："></a>我的理解：</h4><p>&emsp;&emsp;这篇文章的背景是这样的，首先我的每个客户端输入的都是图像，这些图像可以是不同类型的，作者在实验中是用了两个不同的数据集来表示这一点。其次是每个客户端的任务也可以是不同的，比如一部分做视觉问答，另一部分做图像描述。因为他们的任务不一样，所以传统的联邦学习方法就不适用了。作者的方法概括的说就是让服务端去学习一个对应于不同任务的图像表示。</p>
+<h4 id="文章可能存在的问题："><a href="#文章可能存在的问题：" class="headerlink" title="文章可能存在的问题："></a>文章可能存在的问题：</h4><p>&emsp;&emsp;这里服务端虽然没有直接获取客户端输入的图像，但是却可以得到所有输入图像的两种表示，而每个客户端得到这两种表示的网络模型是完全固定的。如果这个模型被获取到，或者是通过反向计算得到输入的图像，就会造成客户端数据的泄露。</p>
+
     </div>
-    
 
     
     
     
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" rel="tag"># 联邦学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%B8%80/" rel="prev" title="Federated Learning文献阅读笔记——一">
+      <i class="fa fa-chevron-left"></i> Federated Learning文献阅读笔记——一
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
 
 
           </div>
@@ -248,6 +321,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E9%9D%A2%E5%AF%B9%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">这篇文章面对的问题：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0%E7%9A%84%E8%B4%A1%E7%8C%AE%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">这篇文章的贡献：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">我的理解：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">文章可能存在的问题：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -263,16 +337,16 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
