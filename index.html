@@ -164,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/29/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%B8%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/love.jpg">
@@ -178,7 +178,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/" class="post-title-link" itemprop="url">Federated Learning文献阅读笔记——二</a>
+            <a href="/2021/05/29/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%B8%89/" class="post-title-link" itemprop="url">Federated-Learning文献阅读笔记——三</a>
         </h2>
 
         <div class="post-meta">
@@ -189,7 +189,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-05-27 18:31:08 / 修改时间：18:45:11" itemprop="dateCreated datePublished" datetime="2021-05-27T18:31:08+08:00">2021-05-27</time>
+              <time title="创建时间：2021-05-29 13:44:54 / 修改时间：14:12:58" itemprop="dateCreated datePublished" datetime="2021-05-29T13:44:54+08:00">2021-05-29</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -210,8 +210,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/05/29/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%B8%89/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/29/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%B8%89/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -226,18 +226,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>Author: Fenglin Liu, X. W., Shen Ge, Wei Fan, Yuexian Zou</strong></p>
-<p><strong>Title: Federated Learning for Vision-and-Language Grounding Problems</strong> </p>
-<p><strong>BookTitle: The Thirty-Fourth AAAI Conference on Artificial Intelligence</strong></p>
-<p><strong>Year: 2020</strong></p>
-<p>原文地址：<a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/6824">https://ojs.aaai.org/index.php/AAAI/article/view/6824</a></p>
-<h4 id="这篇文章面对的问题："><a href="#这篇文章面对的问题：" class="headerlink" title="这篇文章面对的问题："></a>这篇文章面对的问题：</h4><p>&emsp;&emsp;视觉语言（vision-and-language）领域最近受到越来越多的关注，比如说image caption问题和VQA（visual question answering）问题，尽管深度神经网络已经取得了很大的成功，但是大部分深度学习的框架仍然是聚焦于单独的任务（individual tasks），事实上如果将这些任务放在一起来考虑，有很大的概率获得更好的效果。实际上已经有这样的工作了，但是这些方法需要将所有的下游任务数据（downstream tasks data）进行共享，这样会导致数据泄露；而且当任务跨数据集时，这些方法就没有办法起效了。</p>
-<h4 id="这篇文章的贡献："><a href="#这篇文章的贡献：" class="headerlink" title="这篇文章的贡献："></a>这篇文章的贡献：</h4><p>&emsp;&emsp;作者打算采用联邦学习的思路来解决以上问题，作出了以下贡献：</p>
-<p>&emsp;&emsp;1、提出了一个联邦学习框架。通过生成细粒度的图像表征，提高了各种视觉和语言基础问题的性能，而不需要共享下游的任务数据。</p>
-<p>&emsp;&emsp;2、在框架中实现了集中式模型，即设计的对齐、整合和映射网络（aimNet），它将从图像中提取的视觉和文本特征有效地自动转换为细粒度的图像表示。</p>
-<p>&emsp;&emsp;3、在三个联合学习环境中验证了这些方法。在MSCOCO图像标题数据集、Flickr30k图像标题数据集和VQA v2.0数据集上进行的广泛实验证明了方法的有效性和普遍性。</p>
-<h4 id="我的理解："><a href="#我的理解：" class="headerlink" title="我的理解："></a>我的理解：</h4><p>&emsp;&emsp;这篇文章的背景是这样的，首先我的每个客户端输入的都是图像，这些图像可以是不同类型的，作者在实验中是用了两个不同的数据集来表示这一点。其次是每个客户端的任务也可以是不同的，比如一部分做视觉问答，另一部分做图像描述。因为他们的任务不一样，所以传统的联邦学习方法就不适用了。作者的方法概括的说就是让服务端去学习一个对应于不同任务的图像表示。</p>
-<h4 id="文章可能存在的问题："><a href="#文章可能存在的问题：" class="headerlink" title="文章可能存在的问题："></a>文章可能存在的问题：</h4><p>&emsp;&emsp;这里服务端虽然没有直接获取客户端输入的图像，但是却可以得到所有输入图像的两种表示，而每个客户端得到这两种表示的网络模型是完全固定的。如果这个模型被获取到，或者是通过反向计算得到输入的图像，就会造成客户端数据的泄露。</p>
+          <p><em><strong>Author: E. Bagdasaryan, A. Veit, Y. Hua, D. Estrin and V. Shmatikov</strong></em></p>
+<p><em><strong>Title: How To Backdoor Federated Learning</strong></em></p>
+<p><em><strong>BookTitle: Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics Proceedings of Machine Learning Research 2020</strong></em></p>
+<p><em><strong>Year: 2020</strong></em></p>
+<p>&emsp;&emsp;联邦学习是一种分布式机器学习方法，它允许多个用户在数据不出本地的情况下共同训练一个模型。各个用户在本地对模型进行训练之后，仅仅需要上传一个最小的更新到中心服务器，中心服务器利用各个用户上传的更新来对全局模型（global model）进行更新训练，直到全局模型符合要求。因为联邦学习中的各个参与者的数据都没有离开本地，因此数据泄露的风险大大降低（根据原理，联邦学习数据泄露的风险仍然存在，因为它仍然要求用户上传一个最小更新到中心服务器，而从这个最小更新仍然可能破译出原始数据的部分特征）。</p>
+<p><strong>这篇文章的主要贡献是：</strong></p>
+<p>1、    论证了联邦学习存在的另外一个问题——它容易被<strong>后门攻击（backdoor attack）</strong>。</p>
+<p>2、    提出了一种进行后门攻击的方法——<strong>改进的model replacement</strong>，并进行了验证，证明了其有效性和规避异常检测的能力。</p>
+<p>&emsp;&emsp;首先介绍一下什么是后门攻击，后门攻击是指在模型训练过程中，向模型植入后门（backdoor），使得模型在实现自身本职功能的同时，还能实现后门功能。从原理上讲，在联邦学习中容易被后门攻击主要体现在以下几个方面：</p>
+<ul>
+<li><p>从定义上来说，会存在着成千上万的不受中心节点控制训练过程的device，这样必然会容易存在着恶意的device</p>
+</li>
+<li><p>联邦学习的一个假设就是device上的数据分布是NON-IID的，并且为了聚合的安全性，会引入secure aggregation。这样异常检测就很难做了</p>
+</li>
+<li><p>深度学习的能力很强，即便是在主任务上不引人任何backdoor，device还是容易从subtask上引入backdoor。</p>
+</li>
+</ul>
+<p>&emsp;&emsp;作者提出的改进的model replacement方法在持久性和规避异常检测方面有着很好的效果：</p>
+<ul>
+<li><p>持久性：在有恶意攻击者参与的联邦学习过程中，攻击者控制的参与者一定是远远小于参与者总数的，并且根据联邦学习的原理，并非每个参与者都能参加每次的迭代过程，因此在攻击者没有参与的迭代中，攻击效果被削弱了，在本文中，采用<strong>在攻击训练中减缓学习率</strong>的方式来提高攻击效果的持久性。</p>
+</li>
+<li><p>规避异常检测：本文提出了两种规避异常检测的方法：<strong>Constrain-and-scale方法</strong>和<strong>Train-and-scale方法</strong>。前提是<strong>攻击者已知中心服务器异常检测的方法</strong>。</p>
+</li>
+</ul>
+<p>&emsp;&emsp;最后作者在图片分类和词语预测两个联邦学习实验中验证了自己的理论。</p>
+<p>&emsp;&emsp;这篇文章讲的是如何对联邦学习进行后门攻击，实际上也是在找联邦学习中尚且存在的一些问题，对联邦学习的发展和今后的应用实践是非常有好处的。所以今后联邦学习研究的课题可以是：既然恶意参与者无法避免，有没有相应的制裁措施，如何完善异常检测机制？</p>
 
       
     </div>
@@ -330,6 +344,99 @@
 <p>&emsp;&emsp;与分布式优化问题相比，联邦优化问题有着明显的区别：（1）用户数据非独立同分布：特定的用户数据不能代表用户的整体分布；（20）用户数据量不平衡： 数据量不均衡，因为有的用户使用多，有的用户使用少；（3）用户（分布）是大规模的： 参与优化的 用户数＞平均每个用户的数据量；（4）用户端设备通信限制： 移动设备经常掉线、速度缓慢、费用昂贵。</p>
 <p>&emsp;&emsp;因此在联邦优化问题中，占据成本的主要因素可能不是计算成本，而是通信成本，作者提出了的方法是使用额外的计算来减少通信次数，并提出了两种方法：（1）提高并行性：在每个通信回合之间使用更多的客户端独立工作；（2）增加每个客户端的计算量：不像梯度计算那样执行简单的计算，而是每个客户端在每个通信回合之间执行更复杂的计算。<br>作者进行了实践，结论是：各种模型架构（多层感知器，两种不同的卷积神经网络， 两层字符LSTM和大规模词级LSTM）的实验结果表明，当FedAvg使用相对较少的交流轮次来训练高质量的模型时，联邦学习是实际可行的。</p>
 <p>&emsp;&emsp;我认为作者提出的联邦学习思路是一种很好的解决如今数据不足和隐私安全问题的方案，存在的一些不足或者说接下来的研究方向可以是：（1）隐私安全问题：本地客户端仍然需要对中心服务器发送数据，如何保证不会从这些数据倒推出原始数据的相关特征；（2）通信成本问题：是否还有更好的方法降低通信成本？（3）安全攻防问题：如何抵御部分恶意用户发送垃圾数据，影响模型精度？</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/love.jpg">
+      <meta itemprop="name" content="Hugo Wang(Wang Zenghui)">
+      <meta itemprop="description" content="欢迎来到我的个人博客，我将在这里记录我的生活，写一些技术贴还有随笔什么的（尽量更新）">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hugo's space">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/" class="post-title-link" itemprop="url">Federated Learning文献阅读笔记——二</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-05-27 18:31:08 / 修改时间：18:45:11" itemprop="dateCreated datePublished" datetime="2021-05-27T18:31:08+08:00">2021-05-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">联邦学习</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/27/Federated-Learning%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%8C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>Author: Fenglin Liu, X. W., Shen Ge, Wei Fan, Yuexian Zou</strong></p>
+<p><strong>Title: Federated Learning for Vision-and-Language Grounding Problems</strong> </p>
+<p><strong>BookTitle: The Thirty-Fourth AAAI Conference on Artificial Intelligence</strong></p>
+<p><strong>Year: 2020</strong></p>
+<p>原文地址：<a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/6824">https://ojs.aaai.org/index.php/AAAI/article/view/6824</a></p>
+<h4 id="这篇文章面对的问题："><a href="#这篇文章面对的问题：" class="headerlink" title="这篇文章面对的问题："></a>这篇文章面对的问题：</h4><p>&emsp;&emsp;视觉语言（vision-and-language）领域最近受到越来越多的关注，比如说image caption问题和VQA（visual question answering）问题，尽管深度神经网络已经取得了很大的成功，但是大部分深度学习的框架仍然是聚焦于单独的任务（individual tasks），事实上如果将这些任务放在一起来考虑，有很大的概率获得更好的效果。实际上已经有这样的工作了，但是这些方法需要将所有的下游任务数据（downstream tasks data）进行共享，这样会导致数据泄露；而且当任务跨数据集时，这些方法就没有办法起效了。</p>
+<h4 id="这篇文章的贡献："><a href="#这篇文章的贡献：" class="headerlink" title="这篇文章的贡献："></a>这篇文章的贡献：</h4><p>&emsp;&emsp;作者打算采用联邦学习的思路来解决以上问题，作出了以下贡献：</p>
+<p>&emsp;&emsp;1、提出了一个联邦学习框架。通过生成细粒度的图像表征，提高了各种视觉和语言基础问题的性能，而不需要共享下游的任务数据。</p>
+<p>&emsp;&emsp;2、在框架中实现了集中式模型，即设计的对齐、整合和映射网络（aimNet），它将从图像中提取的视觉和文本特征有效地自动转换为细粒度的图像表示。</p>
+<p>&emsp;&emsp;3、在三个联合学习环境中验证了这些方法。在MSCOCO图像标题数据集、Flickr30k图像标题数据集和VQA v2.0数据集上进行的广泛实验证明了方法的有效性和普遍性。</p>
+<h4 id="我的理解："><a href="#我的理解：" class="headerlink" title="我的理解："></a>我的理解：</h4><p>&emsp;&emsp;这篇文章的背景是这样的，首先我的每个客户端输入的都是图像，这些图像可以是不同类型的，作者在实验中是用了两个不同的数据集来表示这一点。其次是每个客户端的任务也可以是不同的，比如一部分做视觉问答，另一部分做图像描述。因为他们的任务不一样，所以传统的联邦学习方法就不适用了。作者的方法概括的说就是让服务端去学习一个对应于不同任务的图像表示。</p>
+<h4 id="文章可能存在的问题："><a href="#文章可能存在的问题：" class="headerlink" title="文章可能存在的问题："></a>文章可能存在的问题：</h4><p>&emsp;&emsp;这里服务端虽然没有直接获取客户端输入的图像，但是却可以得到所有输入图像的两种表示，而每个客户端得到这两种表示的网络模型是完全固定的。如果这个模型被获取到，或者是通过反向计算得到输入的图像，就会造成客户端数据的泄露。</p>
 
       
     </div>
@@ -701,7 +808,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
